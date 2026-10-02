@@ -1,3 +1,4 @@
+```css
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&display=swap");
 
 @font-face {
@@ -74,7 +75,9 @@ a, button {
 }
 
 @keyframes pulse {
-  50% { opacity: .55; }
+  50% {
+    opacity: .55;
+  }
 }
 
 .page {
@@ -125,7 +128,6 @@ a, button {
   font-size: 15px;
 }
 
-
 .socials {
   margin-top: 22px;
   display: flex;
@@ -155,66 +157,6 @@ a, button {
   height: 28px;
   object-fit: contain;
 }
-
-.audio-player {
-  margin: 25px auto 0;
-  width: min(100%, 520px);
-  padding: 12px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-align: left;
-  border: 2px solid rgba(0,255,0,.08);
-  border-radius: 14px;
-  background: rgba(0,255,0,.06);
-}
-
-.track {
-  min-width: 0;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.track img {
-  width: 44px;
-  height: 44px;
-  object-fit: cover;
-  border-radius: 9px;
-}
-
-.track strong,
-.track small {
-  display: block;
-}
-
-.track strong {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.track small {
-  margin-top: 2px;
-  color: rgba(0,255,0,.55);
-}
-
-#play {
-  width: 40px;
-  height: 40px;
-  border: 0;
-  border-radius: 50%;
-  color: #090909;
-  background: var(--green);
-  box-shadow: 0 0 14px rgba(0,255,0,.3);
-}
-
-#volume {
-  accent-color: var(--green);
-  width: 90px;
-}
-
 
 .snow {
   position: fixed;
@@ -247,12 +189,5 @@ a, button {
   .profile-card {
     padding: 28px 12px;
   }
-
-  .audio-player {
-    flex-wrap: wrap;
-  }
-
-  #volume {
-    width: 100%;
-  }
 }
+```
