@@ -157,8 +157,6 @@ a, button {
 }
 
 .audio-player {
-  width: 125px;
-  height: 125px;
   padding: 12px;
   display: flex;
   align-items: center;
