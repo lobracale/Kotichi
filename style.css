@@ -1,3 +1,4 @@
+```css
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&display=swap");
 
 @font-face {
@@ -28,7 +29,8 @@
   color: #090909;
 }
 
-html, body {
+html,
+body {
   min-height: 100%;
   margin: 0;
 }
@@ -36,28 +38,44 @@ html, body {
 body {
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 50% 30%, rgba(0,255,0,.055), transparent 35%),
+    radial-gradient(circle at 50% 30%, rgba(0, 255, 0, .055), transparent 35%),
     var(--dark);
   color: var(--green);
   font-family: "Satoshi", "Onest", sans-serif;
 }
 
-a, button, input {
+a,
+button,
+input {
   font: inherit;
 }
 
-a, button {
+a,
+button {
   cursor: pointer;
 }
+
+
+/* =========================
+   ÉCRAN D'ENTRÉE
+   ========================= */
 
 .enter-screen {
   position: fixed;
   inset: 0;
   z-index: 100;
+
   display: grid;
   place-items: center;
+
   background: #0a0a0a;
-  transition: opacity .6s ease, visibility .6s ease;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    opacity .6s ease,
+    visibility .6s ease;
 }
 
 .enter-screen.hidden {
@@ -69,116 +87,185 @@ a, button {
 .enter-text {
   font-size: 30px;
   font-weight: 700;
+
+  cursor: pointer;
+
   text-shadow: 0 0 16px var(--green);
+
   animation: pulse 1.8s infinite ease-in-out;
 }
 
 @keyframes pulse {
-  50% { opacity: .55; }
+  50% {
+    opacity: .55;
+  }
 }
+
+
+/* =========================
+   PAGE
+   ========================= */
 
 .page {
   min-height: 100vh;
+
   display: grid;
   place-items: center;
+
   padding: 40px 15px;
+
   position: relative;
   z-index: 2;
 }
 
+
+/* =========================
+   PROFILE
+   ========================= */
+
 .profile-card {
   width: min(100%, 40rem);
+
   padding: 35px 15px;
+
   text-align: center;
-  border: 2px solid rgba(255,255,255,.18);
+
+  border: 2px solid rgba(255, 255, 255, .18);
   border-radius: var(--radius);
+
   background: var(--card);
+
   backdrop-filter: blur(0);
-  box-shadow: 0 0 45px rgba(0,255,0,.025);
+
+  box-shadow: 0 0 45px rgba(0, 255, 0, .025);
 }
 
 .avatar {
   width: 125px;
   height: 125px;
+
   object-fit: cover;
+
   border-radius: 50%;
-  border: 2px solid rgba(0,255,0,.4);
-  box-shadow: 0 0 22px rgba(0,255,0,.18);
+  border: 2px solid rgba(0, 255, 0, .4);
+
+  box-shadow: 0 0 22px rgba(0, 255, 0, .18);
 }
 
 .username {
   margin: 16px 0 3px;
+
   font-size: clamp(32px, 7vw, 39.5px);
   font-weight: 600;
+
   text-shadow: 0 0 16.5px var(--green);
 }
 
 .subtitle {
   margin: 0;
+
   font-size: 19px;
   font-weight: 570;
 }
 
 .location {
   margin: 10px 0 0;
+
   color: var(--green-soft);
   font-size: 15px;
 }
 
 
+/* =========================
+   RÉSEAUX
+   ========================= */
+
 .socials {
   margin-top: 22px;
+
   display: flex;
   justify-content: center;
+
   gap: 14px;
 }
 
 .social {
   width: 48px;
   height: 48px;
+
   display: grid;
   place-items: center;
+
   border-radius: 12px;
-  background: rgba(0,255,0,.12);
-  border: 2px solid rgba(0,255,0,.12);
-  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+
+  background: rgba(0, 255, 0, .12);
+  border: 2px solid rgba(0, 255, 0, .12);
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
 }
 
 .social:hover {
   transform: translateY(-3px);
-  background: rgba(0,255,0,.22);
-  box-shadow: 0 0 18px rgba(0,255,0,.28);
+
+  background: rgba(0, 255, 0, .22);
+
+  box-shadow: 0 0 18px rgba(0, 255, 0, .28);
 }
 
 .social img {
   width: 28px;
   height: 28px;
+
   object-fit: contain;
 }
+
+
+/* =========================
+   NEIGE
+   ========================= */
+
 .snow {
   position: fixed;
   inset: 0;
+
   z-index: 1;
+
   pointer-events: none;
+
   overflow: hidden;
 }
 
 .flake {
   position: absolute;
   top: -30px;
+
   color: var(--green);
+
   font-size: 14px;
+
   text-shadow: 0 0 8px var(--green);
+
   animation: fall linear infinite;
 }
 
 @keyframes fall {
   to {
-    transform: translate3d(var(--drift), 110vh, 0) rotate(360deg);
+    transform:
+      translate3d(var(--drift), 110vh, 0)
+      rotate(360deg);
   }
 }
 
+
+/* =========================
+   MOBILE
+   ========================= */
+
 @media (max-width: 600px) {
+
   .page {
     padding: 25px 10px;
   }
@@ -186,4 +273,6 @@ a, button {
   .profile-card {
     padding: 28px 12px;
   }
+
 }
+```
